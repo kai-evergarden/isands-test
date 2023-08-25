@@ -1,8 +1,5 @@
 package districts;
 
-import com.liferay.portal.kernel.dao.orm.DynamicQuery;
-import com.liferay.portal.kernel.dao.orm.Junction;
-import com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
@@ -10,12 +7,10 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors;
 import com.liferay.portal.kernel.servlet.SessionMessages;
 import com.liferay.portal.kernel.util.ParamUtil;
-import com.liferay.portal.kernel.util.Validator;
 import com.liferay.util.bridges.mvc.MVCPortlet;
 import com.test.model.RegisterOfDistricts;
-import com.test.model.RegisterOfFarmers;
 import com.test.service.RegisterOfDistrictsLocalServiceUtil;
-import com.test.service.RegisterOfFarmersLocalServiceUtil;
+
 
 import javax.portlet.*;
 import java.io.IOException;

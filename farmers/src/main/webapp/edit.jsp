@@ -11,7 +11,6 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="com.test.model.RegisterOfDistricts" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 
 <%
     long registerOfFarmersId = ParamUtil.getLong(request, "registerOfFarmersId");

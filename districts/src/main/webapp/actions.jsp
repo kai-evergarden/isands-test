@@ -2,8 +2,6 @@
 <%@ taglib prefix="portlet" uri="http://java.sun.com/portlet" %>
 <%@ page import="com.liferay.portal.kernel.dao.search.ResultRow" %>
 <%@ page import="com.test.model.RegisterOfDistricts" %>
-<%@ page import="districts.RegisterOfDistrictsWebPortlet" %>
-<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
 <%@ page import="com.liferay.portal.util.PortalUtil" %>
 <%@ page import="com.test.service.RegisterOfDistrictsLocalServiceUtil" %>
 <%@ page import="com.liferay.portal.kernel.exception.SystemException" %>

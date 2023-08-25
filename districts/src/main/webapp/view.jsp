@@ -1,5 +1,4 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.liferay.portal.kernel.exception.SystemException" %>
 <%@ page import="com.test.model.RegisterOfDistricts" %>
 <%@ page import="com.test.service.RegisterOfDistrictsLocalServiceUtil" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
