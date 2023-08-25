@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="language-property-hook:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>language-property-hook</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="language-property-hook-1.0.0.war">
+      <element id="artifact" artifact-name="language-property-hook:war exploded" />
+    </root>
+  </artifact>
+</component>

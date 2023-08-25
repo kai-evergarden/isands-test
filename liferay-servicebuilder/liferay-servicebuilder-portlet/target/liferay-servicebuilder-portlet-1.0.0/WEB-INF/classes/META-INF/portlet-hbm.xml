@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.test.model.RegisterOfDistricts" />
+	<import class="com.test.model.RegisterOfFarmers" />
+	<class name="com.test.model.impl.RegisterOfDistrictsImpl" table="Test_RegisterOfDistricts">
+		<cache usage="read-write" />
+		<id name="registerOfDistrictsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="districtCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isArchived" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.test.model.impl.RegisterOfFarmersImpl" table="Test_RegisterOfFarmers">
+		<cache usage="read-write" />
+		<id name="registerOfFarmersId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="organizationName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="legalForm" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="kpp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ogrn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="registrationArea" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cropAreas" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dateOfRegistration" type="org.hibernate.type.TimestampType" />
+		<property name="isArchived" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+</hibernate-mapping>

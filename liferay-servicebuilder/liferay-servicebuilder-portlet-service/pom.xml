@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>liferay-servicebuilder</groupId>
+		<artifactId>liferay-servicebuilder</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>liferay-servicebuilder</groupId>
+	<artifactId>liferay-servicebuilder-portlet-service</artifactId>
+	<packaging>jar</packaging>
+	<name>liferay-servicebuilder Portlet Service</name>
+	<version>1.0.0</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.liferay.maven.plugins</groupId>
+				<artifactId>liferay-maven-plugin</artifactId>
+				<version>6.2.5</version>
+				<configuration>
+					<webappBaseDir>${basedir}/../liferay-servicebuilder-portlet</webappBaseDir>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<version>6.2.5</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
