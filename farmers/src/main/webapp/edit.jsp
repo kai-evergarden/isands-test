@@ -51,22 +51,34 @@
                         selected='<%=registerOfFarmers != null && registerOfFarmers.getLegalForm().equals("FL")%>'>${"FL"}</aui:option>
         </aui:select>
         <aui:input label="INN" name="inn" min="0"
-                   value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getInn() %>'>
-            <aui:validator name="minLength">9</aui:validator>
-            <aui:validator name="maximumLength">12</aui:validator>
+                   value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getInn() %>'
+                   maxlength="12" minlength="9"
+                   onkeypress="return isNumberKey(event)">
         </aui:input>
 
-        <aui:input label="KPP" name="kpp" value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getKpp() %>'>
-            <aui:validator name="minLength">9</aui:validator>
-            <aui:validator name="maximumLength">9</aui:validator>
+        <aui:input label="KPP" name="kpp" value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getKpp() %>'
+                   maxlength="9" minlength="9"
+                   onkeypress="return isNumberKey(event)">
         </aui:input>
 
 
         <aui:input label="OGRN" name="ogrn" min="0"
-                   value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getOgrn() %>'>
-            <aui:validator name="minLength">13</aui:validator>
-            <aui:validator name="maximumLength">13</aui:validator>
+                   value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getOgrn() %>'
+                   maxlength="13" minlength="13"
+                   onkeypress="return isNumberKey(event)">
         </aui:input>
+
+        <script>
+            function isNumberKey(event) {
+                var charCode = (event.which) ? event.which : event.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    event.preventDefault();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
         <aui:select label="Registration Area" name="registrationArea"
                     value='<%= registerOfFarmers == null ? "" : registerOfFarmers.getRegistrationArea() %>'>
 

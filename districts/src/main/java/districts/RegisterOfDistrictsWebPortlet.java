@@ -46,6 +46,7 @@ public class RegisterOfDistrictsWebPortlet extends MVCPortlet {
         renderRequest.setAttribute("filteredRecords", filteredRecords);
         super.doView(renderRequest, renderResponse);
     }
+
     public void addRegisterOfDistricts(ActionRequest request, ActionResponse response) throws SystemException, IOException, PortalException {
         feelTheRegisterOfDistricts(request, response, "created");
     }

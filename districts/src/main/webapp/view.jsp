@@ -37,16 +37,19 @@
 
 </aui:button-row>
 <h4>REGISTRY</h4>
-<liferay-ui:search-container emptyResultsMessage="no-data.caption" total="<%= RegisterOfDistrictsLocalServiceUtil.getRegisterOfDistrictsesCount() %>">
+<liferay-ui:search-container emptyResultsMessage="no-data.caption"
+                             total="<%= RegisterOfDistrictsLocalServiceUtil.getRegisterOfDistrictsesCount() %>">
     <%
-        List<RegisterOfDistricts> list= (List<RegisterOfDistricts>) renderRequest.getAttribute("filteredRecords");
+        List<RegisterOfDistricts> list = (List<RegisterOfDistricts>) renderRequest.getAttribute("filteredRecords");
     %>
     <liferay-ui:search-container-results results='<%=list%>'/>
 
     <liferay-ui:search-container-row className="com.test.model.RegisterOfDistricts" modelVar="registerOfDistricts">
         <liferay-ui:search-container-column-text name="District name" value="<%= registerOfDistricts.getName() %>"/>
-        <liferay-ui:search-container-column-text name="District code">${ registerOfDistricts.getDistrictCode() }</liferay-ui:search-container-column-text>
-        <liferay-ui:search-container-column-text name="Archive">${ registerOfDistricts.getIsArchived() }</liferay-ui:search-container-column-text>
+        <liferay-ui:search-container-column-text
+                name="District code">${ registerOfDistricts.getDistrictCode() }</liferay-ui:search-container-column-text>
+        <liferay-ui:search-container-column-text
+                name="Archive">${ registerOfDistricts.getIsArchived() }</liferay-ui:search-container-column-text>
         <liferay-ui:search-container-column-jsp name="Manage" path="/actions.jsp"/>
     </liferay-ui:search-container-row>
 

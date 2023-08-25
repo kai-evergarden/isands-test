@@ -19,7 +19,7 @@
     <aui:fieldset>
         <aui:input name="dateOfRegistration" label="Date of Registration" type="date"/>
         <aui:input name="registrationArea" label="Registration Area" type="text"/>
-        <aui:input name="inn" label="INN" type="text" />
+        <aui:input name="inn" label="INN" type="text"/>
         <aui:input name="organizationName" label="Organization Name" type="text"/>
         <aui:input name="isArchive" label="Show Archive" type="checkbox"/>
 
@@ -49,7 +49,7 @@
                              total="<%=RegisterOfFarmersLocalServiceUtil.getRegisterOfFarmersesCount()%>">
 
     <%
-            List<RegisterOfFarmers> list= (List<RegisterOfFarmers>) renderRequest.getAttribute("filteredRecords");
+        List<RegisterOfFarmers> list = (List<RegisterOfFarmers>) renderRequest.getAttribute("filteredRecords");
     %>
     <liferay-ui:search-container-results results='<%=list%>'/>
     <liferay-ui:search-container-row className="com.test.model.RegisterOfFarmers" modelVar="registerOfFarmers">

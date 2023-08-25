@@ -17,11 +17,12 @@
 
 <portlet:renderURL var="viewURL">
 
-    <portlet:param name="mvcPath" value='/view.jsp' />
+    <portlet:param name="mvcPath" value='/view.jsp'/>
 
 </portlet:renderURL>
 
-<portlet:actionURL name='<%= registerOfDistricts == null ? "addRegisterOfDistricts" : "updateRegisterOfDistricts"%>' var="editRegisterOfDistrictsURL" />
+<portlet:actionURL name='<%= registerOfDistricts == null ? "addRegisterOfDistricts" : "updateRegisterOfDistricts"%>'
+                   var="editRegisterOfDistrictsURL"/>
 
 
 <aui:form action="<%= editRegisterOfDistrictsURL %>" name="<portlet:namespace />fm" method="post">
@@ -35,10 +36,12 @@
                value='<%= registerOfDistricts == null ? "" : registerOfDistricts.getRegisterOfDistrictsId() %>'/>
 
     <aui:fieldset>
-        <aui:input label="District name" name="name" value='<%= registerOfDistricts == null ? "" : registerOfDistricts.getName() %>'>
+        <aui:input label="District name" name="name"
+                   value='<%= registerOfDistricts == null ? "" : registerOfDistricts.getName() %>'>
             <aui:validator name="maxLength">100</aui:validator>
         </aui:input>
-        <aui:input label="District code" name="districtCode" min="0" value='<%= registerOfDistricts == null ? "" : registerOfDistricts.getDistrictCode() %>'>
+        <aui:input label="District code" name="districtCode" min="0"
+                   value='<%= registerOfDistricts == null ? "" : registerOfDistricts.getDistrictCode() %>'>
             <aui:validator name="min">1</aui:validator>
         </aui:input>
         <aui:input label="Archive" type="checkbox" name="isArchived"

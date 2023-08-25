@@ -29,14 +29,16 @@
                      url="<%=editURL %>"/>
 
     <portlet:actionURL name="deleteRegisterOfDistricts" var="deleteRegisterOfDistrictsURL">
-        <portlet:param name="registerOfDistrictsId" value="<%= String.valueOf(registerOfDistricts.getRegisterOfDistrictsId()) %>"/>
+        <portlet:param name="registerOfDistrictsId"
+                       value="<%= String.valueOf(registerOfDistricts.getRegisterOfDistrictsId()) %>"/>
         <portlet:param name="backURL" value="${currentURL}"/>
     </portlet:actionURL>
 
     <liferay-ui:icon-delete url="<%=deleteRegisterOfDistrictsURL %>"/>
 
     <portlet:actionURL name="changeArchiveStatus" var="changeArchiveStatusURL">
-        <portlet:param name="registerOfDistrictsId" value="<%=String.valueOf(registerOfDistricts.getRegisterOfDistrictsId()) %>"/>
+        <portlet:param name="registerOfDistrictsId"
+                       value="<%=String.valueOf(registerOfDistricts.getRegisterOfDistrictsId()) %>"/>
     </portlet:actionURL>
 
     <% RegisterOfDistricts registerOfDistricts1 = null;
@@ -50,6 +52,8 @@
             throw new RuntimeException(e);
         }
 
-    %><liferay-ui:icon image="edit" message='<%= !registerOfDistricts1.getIsArchived() ? "Archive" : "Unarchive"%>' url="<%=changeArchiveStatusURL%>"/>
-    <portlet:actionURL name='<%= registerOfDistricts == null ? "addRegisterOfDistricts" : "updateRegisterOfDistricts"%>' var="editRegisterOfDistrictsURL" />
+    %><liferay-ui:icon image="edit" message='<%= !registerOfDistricts1.getIsArchived() ? "Archive" : "Unarchive"%>'
+                       url="<%=changeArchiveStatusURL%>"/>
+    <portlet:actionURL name='<%= registerOfDistricts == null ? "addRegisterOfDistricts" : "updateRegisterOfDistricts"%>'
+                       var="editRegisterOfDistrictsURL"/>
 </liferay-ui:icon-menu>
