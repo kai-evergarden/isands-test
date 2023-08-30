@@ -3,6 +3,7 @@
 
 <display>
 	<category name="category.sample">
-		<portlet id="liferay-servicebuilder" />
+		<portlet id="fermers" />
+		<portlet id="districts" />
 	</category>
 </display>
